@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="CoffeeVendingMachineModule">
 <head>
   <title>Coffee Vending Machine</title>
   <!-- build:css styles/vendor.css -->
@@ -10,35 +10,20 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body>
+<body ng-controller="CoffeeVendingMachineController">
 <form>
-  <fieldset>
-    <legend>Kind</legend>
-    <label><input type="radio" name="kind" value="regular"> Regular</label>
-    <label><input type="radio" name="kind" value="decaf"> Decaf</label>
+  <fieldset ng-repeat="category in categories">
+    <legend>{{category.name}}</legend>
+    <label ng-repeat="option in category.options">
+      <input type="radio" name="{{category.name}}">
+      {{option.name}}
+    </label>
   </fieldset>
-  <fieldset>
-    <legend>Size</legend>
-    <label><input type="radio" name="size" value="small"> Small</label>
-    <label><input type="radio" name="size" value="medium"> Medium</label>
-    <label><input type="radio" name="size" value="large"> Large</label>
-  </fieldset>
-  <fieldset>
-    <legend>Creamer</legend>
-    <label><input type="radio" name="creamer" value="none"> None</label>
-    <label><input type="radio" name="creamer" value="milk"> Milk</label>
-    <label><input type="radio" name="creamer" value="halfnhalf"> Half-n-half</label>
-  </fieldset>
-  <fieldset>
-    <legend>Sweetener</legend>
-    <label><input type="radio" name="sweetener" value="none"> None</label>
-    <label><input type="radio" name="sweetener" value="sugar"> Sugar</label>
-    <label><input type="radio" name="sweetener" value="splenda"> Splenda</label>
-  </fieldset>
-  <h3>Price: $0.00</h3>
+  <h3>Price: <span class="price">$0.00</span></h3>
   <button type="submit">Buy</button>
   <button type="reset">Cancel</button>
 </form>
+
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
@@ -46,6 +31,7 @@
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/main.js"></script>
 <!-- endbuild -->
 </body>
 </html>
