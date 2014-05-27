@@ -19,7 +19,8 @@
              name="{{category.name}}"
              value="{{option.name}}"
              ng-model="selections[category.name]"
-             ng-change="calculatePrice()">
+             ng-change="calculatePrice()"
+             required>
       {{option.name}}
     </label>
   </fieldset>
