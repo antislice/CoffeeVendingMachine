@@ -12,9 +12,9 @@
 </head>
 <body ng-controller="CoffeeVendingMachineController">
 <form name="coffeeVendingMachineForm">
-  <fieldset ng-repeat="category in categories">
-    <legend>{{category.name}}</legend>
-    <label ng-repeat="option in category.options">
+  <fieldset ng-repeat="category in categories" class="category">
+    <legend class="categoryName">{{category.name}}</legend>
+    <label ng-repeat="option in category.options" class="option">
       <input type="radio"
              name="{{category.name}}"
              value="{{option.name}}"
