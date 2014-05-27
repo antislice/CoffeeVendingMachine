@@ -11,7 +11,7 @@
   <!-- endbuild -->
 </head>
 <body ng-controller="CoffeeVendingMachineController">
-<form>
+<form name="coffeeVendingMachineForm">
   <fieldset ng-repeat="category in categories">
     <legend>{{category.name}}</legend>
     <label ng-repeat="option in category.options">
@@ -25,7 +25,7 @@
     </label>
   </fieldset>
   <h3>Price: {{price | currency}}</h3>
-  <button type="submit">Buy</button>
+  <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
   <button type="reset">Cancel</button>
 </form>
 
