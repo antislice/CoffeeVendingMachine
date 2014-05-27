@@ -1,6 +1,8 @@
 {
   "name": "coffee-vending-machine",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "~1.2.16"
+  },
   "devDependencies": {}
 }
