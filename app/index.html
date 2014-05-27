@@ -23,7 +23,7 @@
       {{option.name}}
     </label>
   </fieldset>
-  <h3>Price: ${{price | number:2}}</h3>
+  <h3>Price: {{price | currency}}</h3>
   <button type="submit">Buy</button>
   <button type="reset">Cancel</button>
 </form>
