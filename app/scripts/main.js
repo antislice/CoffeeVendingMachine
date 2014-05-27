@@ -58,4 +58,16 @@ angular
         ]
       }
     ];
+    $scope.selections = {};
+
+    $scope.price = 0;
+
+    $scope.calculatePrice = function () {
+      $scope.price = _.reduce($scope.selections, function (runningTotal, optionName, categoryName) {
+        var category = _.findWhere($scope.categories, {name: categoryName});
+        var choice = _.findWhere(category.options, {name: optionName});
+        return runningTotal + choice.price;
+      }, 0)
+    };
+
   });

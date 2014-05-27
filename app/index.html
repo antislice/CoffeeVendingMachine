@@ -15,11 +15,15 @@
   <fieldset ng-repeat="category in categories">
     <legend>{{category.name}}</legend>
     <label ng-repeat="option in category.options">
-      <input type="radio" name="{{category.name}}">
+      <input type="radio"
+             name="{{category.name}}"
+             value="{{option.name}}"
+             ng-model="selections[category.name]"
+             ng-change="calculatePrice()">
       {{option.name}}
     </label>
   </fieldset>
-  <h3>Price: <span class="price">$0.00</span></h3>
+  <h3>Price: ${{price | number:2}}</h3>
   <button type="submit">Buy</button>
   <button type="reset">Cancel</button>
 </form>
@@ -27,6 +31,7 @@
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
