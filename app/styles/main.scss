@@ -21,10 +21,18 @@ body {
 .option {
   display: block;
   padding-right: 5px;
+  white-space: nowrap;
 
   &:hover {
     background-color: yellow;
   }
+}
+
+.availability {
+  font-size: 50%;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 3px 5px;
 }
 
 .help {

@@ -25,6 +25,11 @@
                required>
         {{option.name}}
         <a ng-href="https://www.google.com/search?q={{option.name}}" target="_blank" class="help">?</a>
+        <span ng-switch on="option.availability">
+          <span ng-switch-when="none" class="availability">All Out</span>
+          <span ng-switch-when="low" class="availability">Almost Gone</span>
+          <span ng-switch-default class="availability">Plenty</span>
+        </span>
       </label>
     </fieldset>
   </div>

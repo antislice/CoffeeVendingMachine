@@ -36,10 +36,12 @@ angular
             price: 0.00
           }, {
             name: 'Milk',
-            price: 0.46
+            price: 0.46,
+            availability: 'low'
           }, {
             name: 'Half-n-half',
-            price: 0.50
+            price: 0.50,
+            availability: 'none'
           }
         ]
       }, {
