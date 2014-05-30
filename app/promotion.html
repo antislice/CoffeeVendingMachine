@@ -1,3 +1,3 @@
-<label><input type="checkbox" ng-model="hasCoupon" ng-change="coupon = ''"> I have a coupon code</label>
-<input type="text" ng-readonly="!hasCoupon" ng-model="coupon" class="coupon"><br/>
-<label><input type="checkbox" ng-checked="hasCoupon"> Send me the newsletter</label>
+<label><input type="checkbox" ng-model="$parent.hasCoupon" ng-change="coupon = ''"> I have a coupon code</label>
+<input type="text" ng-readonly="!$parent.hasCoupon" ng-model="coupon" class="coupon"><br/>
+<label><input type="checkbox" ng-checked="$parent.hasCoupon"> Send me the newsletter</label>
