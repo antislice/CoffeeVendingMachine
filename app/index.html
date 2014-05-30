@@ -29,9 +29,7 @@
     </fieldset>
   </div>
   <br/>
-  <label><input type="checkbox" ng-model="hasCoupon" ng-change="coupon = ''"> I have a coupon code</label>
-  <input type="text" ng-readonly="!hasCoupon" ng-model="coupon" class="coupon"><br/>
-  <label><input type="checkbox" ng-checked="hasCoupon"> Send me the newsletter</label>
+  <div ng-include="'/promotion.html'"></div>
   <h3>Price: {{price | currency}}</h3>
   <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
   <button type="reset">Cancel</button>
