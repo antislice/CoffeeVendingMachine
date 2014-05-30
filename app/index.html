@@ -29,6 +29,7 @@
     </fieldset>
   </div>
   <br/>
+  <!-- can't figure out how to use a variable in the value of ng-include -->
   <div ng-include="'/promotion.html'"></div>
   <h3>Price: {{price | currency}}</h3>
   <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
