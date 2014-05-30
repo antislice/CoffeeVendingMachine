@@ -11,6 +11,7 @@
   <!-- endbuild -->
 </head>
 <body ng-controller="CoffeeVendingMachineController">
+<img style="float:right" ng-src="{{images[hasCoupon]}}" width="100">
 <form name="coffeeVendingMachineForm">
   <div class="container">
     <fieldset ng-repeat="category in categories" class="category">
