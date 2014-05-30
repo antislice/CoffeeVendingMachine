@@ -12,20 +12,24 @@
 </head>
 <body ng-controller="CoffeeVendingMachineController">
 <form name="coffeeVendingMachineForm">
-  <fieldset ng-repeat="category in categories" class="category">
-    <legend class="categoryName">{{category.name}}</legend>
-    <label ng-repeat="option in category.options" class="option">
-      <input type="radio"
-             name="{{category.name}}"
-             value="{{option.name}}"
-             ng-model="selections[category.name]"
-             ng-change="calculatePrice()"
-             required>
-      {{option.name}}
-    </label>
-  </fieldset>
+  <div class="container">
+    <fieldset ng-repeat="category in categories" class="category">
+      <legend class="categoryName">{{category.name}}</legend>
+      <label ng-repeat="option in category.options" class="option">
+        <input type="radio"
+               name="{{category.name}}"
+               value="{{option.name}}"
+               ng-model="selections[category.name]"
+               ng-change="calculatePrice()"
+               required>
+        {{option.name}}
+        <a ng-href="https://www.google.com/search?q={{option.name}}" target="_blank" class="help">?</a>
+      </label>
+    </fieldset>
+  </div>
+  <br/>
   <label><input type="checkbox" ng-model="hasCoupon" ng-change="coupon = ''"> I have a coupon code</label>
-  <input type="text" ng-readonly="!hasCoupon" ng-model="coupon"><br/>
+  <input type="text" ng-readonly="!hasCoupon" ng-model="coupon" class="coupon"><br/>
   <label><input type="checkbox" ng-checked="hasCoupon"> Send me the newsletter</label>
   <h3>Price: {{price | currency}}</h3>
   <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>

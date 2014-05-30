@@ -5,7 +5,7 @@ body {
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 }
 
-form {
+.container {
   display: inline-block;
 }
 
@@ -25,4 +25,14 @@ form {
   &:hover {
     background-color: yellow;
   }
+}
+
+.help {
+  text-decoration: none;
+  vertical-align: super;
+  font-size: 80%;
+}
+
+.coupon {
+  width: 100px;
 }
