@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12664ce0-fa23-423c-bb27-abc336c406d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/main.js" afterPath="$PROJECT_DIR$/app/scripts/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CoffeeVendingMachine.iws" />
@@ -74,8 +75,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43601894" vertical-offset="404" max-vertical-offset="1037">
-              <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.37598735" vertical-offset="0" max-vertical-offset="1037">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="65" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -106,8 +107,8 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1479">
-              <caret line="64" column="19" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1445">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -144,9 +145,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.jshintrc" />
-        <option value="$PROJECT_DIR$/app/scripts/main.js" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/app/promotion.html" />
+        <option value="$PROJECT_DIR$/app/scripts/main.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
@@ -678,7 +679,8 @@
     <MESSAGE value="Don't know how to use variables in ng-include value.&#10;Using ng-include to include the promotional markup." />
     <MESSAGE value="Using ng-switch to show inventory status in UI." />
     <MESSAGE value="Fixing use of ng-include, it creates a child scope, and we want hasCoupon to be on the parent scope, in order for the right cat picture to show." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing use of ng-include, it creates a child scope, and we want hasCoupon to be on the parent scope, in order for the right cat picture to show." />
+    <MESSAGE value="Using ng-if to only show cancel button once buy button is enabled." />
+    <option name="LAST_COMMIT_MESSAGE" value="Using ng-if to only show cancel button once buy button is enabled." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1043,14 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1479">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/promotion.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
@@ -1059,10 +1053,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1445">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43601894" vertical-offset="404" max-vertical-offset="1037">
-          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.37598735" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="65" />
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

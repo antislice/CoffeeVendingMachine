@@ -12,7 +12,7 @@
 </head>
 <body ng-controller="CoffeeVendingMachineController">
 <img style="float:right" ng-src="{{images[hasCoupon]}}" width="100">
-<form name="coffeeVendingMachineForm">
+<form name="coffeeVendingMachineForm" ng-init="hasCoupon = false">
   <div class="container">
     <fieldset ng-repeat="category in categories" class="category">
       <legend class="categoryName">{{category.name}}</legend>
