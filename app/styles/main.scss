@@ -1,2 +1,28 @@
 // bower:scss
 // endbower
+
+body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+form {
+  display: inline-block;
+}
+
+.category + .category {
+  margin-top: 10px;
+}
+
+.categoryName {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.option {
+  display: block;
+  padding-right: 5px;
+
+  &:hover {
+    background-color: yellow;
+  }
+}

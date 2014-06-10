@@ -1,38 +1,40 @@
 <!doctype html>
 <html ng-app="CoffeeVendingMachineModule">
-  <head>
-    <title>Coffee Vending Machine</title>
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-controller="CoffeeVendingMachineController">
-  <form>
-      <fieldset ng-repeat="category in categories">
-          <legend>{{category.name}}</legend>
-          <label ng-repeat="option in category.options">
-              <input type="radio"
-                     name="{{category.name}}"
-                     value="{{option.name}}"
-                     ng-change="calculatePrice()"
-                     ng-model="selections[category.name]">
-              {{option.name}}
-          </label>
-      </fieldset>
-      <h3>Price {{price | currency}}</h3> <!-- this is using a filter!-->
-      <button type="submit">Buy</button>
-      <button type="reset">Cancel</button>
-  </form>
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/underscore/underscore.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+<head>
+  <title>Coffee Vending Machine</title>
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-controller="CoffeeVendingMachineController">
+<form name="coffeeVendingMachineForm">
+  <fieldset ng-repeat="category in categories" class="category">
+    <legend class="categoryName">{{category.name}}</legend>
+    <label ng-repeat="option in category.options" class="option">
+      <input type="radio"
+             name="{{category.name}}"
+             value="{{option.name}}"
+             ng-model="selections[category.name]"
+             ng-change="calculatePrice()"
+             required>
+      {{option.name}}
+    </label>
+  </fieldset>
+  <h3>Price: {{price | currency}}</h3>
+  <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
+  <button type="reset">Cancel</button>
+</form>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/main.js"></script>
