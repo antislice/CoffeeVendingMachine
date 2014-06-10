@@ -1,7 +1,7 @@
 angular
   .module('CoffeeVendingMachineModule', [])
   .controller('CoffeeVendingMachineController', function ($scope) {
-    "use strict";
+    'use strict';
     $scope.categories = [
       {
         name: 'Kind',
@@ -66,8 +66,8 @@ angular
       $scope.price = _.reduce($scope.selections, function (runningTotal, optionName, categoryName) {
         var category = _.findWhere($scope.categories, {name: categoryName});
         var choice = _.findWhere(category.options, {name: optionName});
-        return runningTotal + choice.price;
-      }, 0)
+				return runningTotal + choice.price;
+      }, 0);
     };
 
   });
