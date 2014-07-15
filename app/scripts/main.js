@@ -1,5 +1,16 @@
 angular
   .module('CoffeeVendingMachineModule', [])
+  .directive('cvAvailability', function () {
+    "use strict";
+    return {
+      restrict: 'A',
+      templateUrl: 'availability.html',
+      replace: true,
+      scope: {
+        availability: '@'
+      }
+    };
+  })
   .controller('CoffeeVendingMachineController', function ($scope) {
     "use strict";
     $scope.categories = [

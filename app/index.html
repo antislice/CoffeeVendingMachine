@@ -24,12 +24,8 @@
                ng-change="calculatePrice()"
                required>
         {{option.name}}
-        <a ng-href="https://www.google.com/search?q={{option.name}}" target="_blank" class="help">?</a>
-        <span ng-switch on="option.availability">
-          <span ng-switch-when="none" class="availability">All Out</span>
-          <span ng-switch-when="low" class="availability">Almost Gone</span>
-          <span ng-switch-default class="availability">Plenty</span>
-        </span>
+        <a ng-href="https://www.google.com/search?q={{option.name}}" target="_blank" ng-class="{help: someExpression, otherClass: hasCoupon}">?</a>
+        <span cv-availability availability="{{option.availability}}">foo</span>
       </label>
     </fieldset>
   </div>
@@ -40,6 +36,14 @@
   <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
   <button type="reset" ng-if="coffeeVendingMachineForm.$valid">Cancel</button>
 </form>
+
+<script type="text/ng-template" id="availability.html">
+  <span ng-switch on="availability">
+      <span ng-switch-when="none" class="availability">All Out</span>
+      <span ng-switch-when="low" class="availability">Almost Gone</span>
+      <span ng-switch-default class="availability">Plenty</span>
+  </span>
+</script>
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
