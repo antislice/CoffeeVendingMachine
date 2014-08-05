@@ -1,5 +1,16 @@
 angular
   .module('CoffeeVendingMachineModule', [])
+  .directive('cvAvailability', function () {
+		'use strict';
+		return {
+			restrict: 'A',
+			templateUrl: 'availability.html',
+			replace: true,
+			scope: {
+				availability: '@'
+			}
+		};
+	})
   .controller('CoffeeVendingMachineController', function ($scope) {
     'use strict';
     $scope.categories = [
@@ -36,10 +47,12 @@ angular
             price: 0.00
           }, {
             name: 'Milk',
-            price: 0.46
+            price: 0.46,
+						availability: 'low'
           }, {
             name: 'Half-n-half',
-            price: 0.50
+            price: 0.50,
+						availability: 'none'
           }
         ]
       }, {
@@ -59,6 +72,11 @@ angular
       }
     ];
     $scope.selections = {};
+
+    $scope.images = {
+      'true': 'http://4.bp.blogspot.com/-MzZCzWI_6Xc/UIUQp1qPfzI/AAAAAAAAHpA/OTwHCJSWFAY/s1600/cats_animals_kittens_cat_kitten_cute_desktop_1680x1050_hd-wallpaper-753974.jpeg',
+      'false': 'http://cdn.cutestpaw.com/wp-content/uploads/2011/11/cute-cat-l.jpg'
+    };
 
     $scope.price = 0;
 
