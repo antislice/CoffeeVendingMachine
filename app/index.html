@@ -34,7 +34,7 @@
   <div ng-include="'/promotion.html'"></div>
   <h3>Price: {{price | currency}}</h3>
   <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
-  <button type="reset" ng-if="coffeeVendingMachineForm.$valid">Cancel</button>
+  <button cv-name-selector type="reset" ng-if="coffeeVendingMachineForm.$valid">Cancel</button>
 </form>
 
 <script type="text/ng-template" id="availability.html">
@@ -54,6 +54,7 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/main.js"></script>
+<script src="scripts/name-selector-directive.js"></script>
 <!-- endbuild -->
 </body>
 </html>

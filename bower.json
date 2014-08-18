@@ -2,8 +2,11 @@
   "name": "coffee-vending-machine",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "~1.2.16",
+    "angular": "~1.2.22",
     "underscore": "~1.6.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "angular-mocks": "~1.2.22",
+    "jquery": "~2.1.1"
+  }
 }
