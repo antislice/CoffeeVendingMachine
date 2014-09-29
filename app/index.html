@@ -11,31 +11,9 @@
   <!-- endbuild -->
 </head>
 <body ng-controller="CoffeeVendingMachineController">
-<img style="float:right" ng-src="{{images[hasCoupon]}}" width="100">
-<form name="coffeeVendingMachineForm" ng-init="hasCoupon = false">
-  <div class="container">
-    <fieldset ng-repeat="category in categories" class="category">
-      <legend class="categoryName">{{category.name}}</legend>
-      <label ng-repeat="option in category.options" class="option">
-        <input type="radio"
-               name="{{category.name}}"
-               value="{{option.name}}"
-               ng-model="selections[category.name]"
-               ng-change="calculatePrice()"
-               required>
-        {{option.name}}
-        <a ng-href="https://www.google.com/search?q={{option.name}}" target="_blank" ng-class="{help: someExpression, otherClass: hasCoupon}">?</a>
-        <span cv-availability availability="{{option.availability}}">foo</span>
-      </label>
-    </fieldset>
-  </div>
-  <br/>
-  <!-- can't figure out how to use a variable in the value of ng-include -->
-  <div ng-include="'/promotion.html'"></div>
-  <h3>Price: {{price | currency}}</h3>
-  <button type="submit" ng-disabled="coffeeVendingMachineForm.$invalid">Buy</button>
-  <button cv-name-selector type="reset" ng-if="coffeeVendingMachineForm.$valid">Cancel</button>
-</form>
+<a ui-sref="purchase">Purchase Coffee</a>
+<a ui-sref="prices">Set Prices</a>
+<div ui-view></div>
 
 <script type="text/ng-template" id="availability.html">
   <span ng-switch on="availability">
@@ -49,6 +27,7 @@
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
