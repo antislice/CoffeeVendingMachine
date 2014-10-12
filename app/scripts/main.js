@@ -1,5 +1,20 @@
 angular
-  .module('CoffeeVendingMachineModule', [])
+  .module('CoffeeVendingMachineModule', ['ui.router'])
+	.config(function ($stateProvider, $urlRouterProvider) {
+		'use strict';
+		$urlRouterProvider.otherwise('/purchase');
+		//
+		// Now set up the states
+		$stateProvider
+			.state('purchase', {
+				url: '/purchase',
+				templateUrl: 'partials/purchase.html'
+			})
+			.state('prices', {
+				url: '/prices',
+				templateUrl: 'partials/prices.html'
+			});
+	})
   .directive('cvAvailability', function () {
 		'use strict';
 		return {
