@@ -6,4 +6,5 @@ dist
 .idea/workspace.xml
 .DS_Store
 app/.DS_Store
+app/bower_components
 app/bower_components/*
